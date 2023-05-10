@@ -64,7 +64,7 @@ export default function Aside() {
       </Content>
       <Footer>
         <Totals />
-        <Link href="/checkout" passHref>
+        <Link href="/checkout" passHref legacyBehavior>
           <CheckoutBtn
             as="a"
             state={going ? 'loading' : null}

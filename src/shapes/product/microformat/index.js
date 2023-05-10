@@ -21,7 +21,7 @@ export default function ProductItem({ data }) {
   const pricing = getRelativePriceVariants({ variant, locale });
 
   return (
-    <Link href={path} passHref>
+    <Link href={path} passHref legacyBehavior>
       <Outer type={type}>
         <Inner>
           <ImageWrapper>

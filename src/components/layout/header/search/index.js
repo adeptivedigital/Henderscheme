@@ -166,8 +166,9 @@ export default function Search() {
                     <Link
                       href={node.path}
                       onClick={() => dispatch({ action: 'blue' })}
+                      legacyBehavior
                     >
-                      <a>{node.name}</a>
+                      {node.name}
                     </Link>
                   </li>
                 ))}

@@ -15,7 +15,7 @@ export default function FolderItem({ data }) {
   //   ?.content?.images?.[0];
 
   return (
-    <Link href={path} passHref>
+    <Link href={path} passHref legacyBehavior>
       <Outer>
         <Text>
           <H3>{name}</H3>

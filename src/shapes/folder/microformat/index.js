@@ -11,7 +11,7 @@ export default function FolderItem({ data }) {
   const { name, path } = data;
 
   return (
-    <Link href={path} passHref>
+    <Link href={path} passHref legacyBehavior>
       <Outer>
         <Text>
           <H3>{name}</H3>

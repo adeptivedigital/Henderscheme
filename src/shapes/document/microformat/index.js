@@ -41,7 +41,7 @@ export default function DocumentItem({ data }) {
   }
 
   return (
-    <Link href={path} passHref>
+    <Link href={path} passHref legacyBehavior>
       <Outer>
         <Inner>
           {!!media && <MediaWrapper>{media}</MediaWrapper>}

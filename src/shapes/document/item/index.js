@@ -40,7 +40,7 @@ export default function DocumentItem({ data, colSpan = '4' }) {
   }
 
   return (
-    <Link href={path} passHref>
+    <Link href={path} passHref legacyBehavior>
       <Outer span={colSpan}>
         {Boolean(media) && <MediaWrapper>{media}</MediaWrapper>}
         <Text>

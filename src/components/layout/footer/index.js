@@ -14,19 +14,17 @@ export default function Footer() {
 
   return (
     <Outer>
-      <Link href="/">
-        <a aria-label="Logo">
-          <Logo>
-            <img src="/static/shop-logo.svg" alt="" width="56" height="84" />
-          </Logo>
-        </a>
+      <Link href="/" aria-label="Logo" legacyBehavior>
+        <Logo>
+          <img src="/static/shop-logo.svg" alt="" width="56" height="84" />
+        </Logo>
       </Link>
       <NavList>
         <h5>{t('menu')}</h5>
         {mainNavigation?.map((category) => (
           <li key={category.path}>
-            <Link href={category.path}>
-              <a>{category.name}</a>
+            <Link href={category.path} legacyBehavior>
+              {category.name}
             </Link>
           </li>
         ))}

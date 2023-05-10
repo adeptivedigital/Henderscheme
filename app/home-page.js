@@ -1,9 +1,11 @@
+'use client';
+
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import Cmp, { getData } from 'page-components/folder';
 import { getLocaleFromContext } from 'lib/app-config';
 
-import nextI18NextConfig from '../../next-i18next.config.js';
+import nextI18NextConfig from '../next-i18next.config.js';
 
 export async function getStaticProps(context) {
   const { preview } = context;
