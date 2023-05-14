@@ -56,7 +56,7 @@ function childrenIsMostlyProducts(children) {
  * url, by querying the catalogue to see if there is an item
  * with this url as path.
  */
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const { params, preview } = context;
   const { catalogue } = params;
   const locale = getLocaleFromContext(context);
@@ -137,7 +137,7 @@ export async function getStaticProps(context) {
   };
 }
 
-export async function getStaticPaths({ locales, defaultLocale }) {
+export async function generateStaticParams({ locales, defaultLocale }) {
   const paths = [];
 
   await Promise.all((locales || ['en']).map(handleLocale));
